@@ -4,25 +4,23 @@ import 'package:clean_bloc_app/core/entities/user.dart';
 import 'package:clean_bloc_app/features/auth/domain/repository/auth_repository.dart';
 import 'package:fpdart/fpdart.dart';
 
-class UserSignUp implements UseCase<User, UserSignupParams> {
+class UserLogin implements UseCase<User, UserLoginParams> {
   final AuthRepository authRepository;
-  UserSignUp({required this.authRepository});
+
+  UserLogin({required this.authRepository});
 
   @override
-  Future<Either<Failure, User>> call(UserSignupParams params) async {
-    return await authRepository.signupWithEmailPassword(
-      name: params.name,
+  Future<Either<Failure, User>> call(params) async {
+    return await authRepository.loginWithEmailPassword(
       email: params.email,
       password: params.password,
     );
   }
 }
 
-class UserSignupParams {
+class UserLoginParams {
   final String email;
   final String password;
-  final String name;
 
-  UserSignupParams(
-      {required this.email, required this.password, required this.name});
+  UserLoginParams({required this.email, required this.password});
 }
