@@ -46,13 +46,17 @@ class _SignupPageState extends State<SignupPage> {
             listener: (BuildContext context, Object? state) {
               if (state is AuthFailureState) {
                 showSnackBar(context, state.message);
+              } else if (state is AuthSuccessState) {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  HomePage.route(),
+                  (route) => false,
+                );
               }
             },
             builder: (BuildContext context, state) {
               if (state is AuthLoadingState) {
                 return const Loader();
-              } else if (state is AuthSuccessState) {
-                return const HomePage();
               } else {
                 return Form(
                   key: formKey,

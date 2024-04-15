@@ -4,7 +4,7 @@ import 'package:clean_bloc_app/core/error/failures.dart';
 import 'package:clean_bloc_app/core/usecase/usecase.dart';
 import 'package:clean_bloc_app/features/blogs/domain/entities/blog.dart';
 import 'package:clean_bloc_app/features/blogs/domain/repositories/blog_repository.dart';
-import 'package:fpdart/src/either.dart';
+import 'package:fpdart/fpdart.dart';
 
 class UploadBlog implements UseCase<Blog, UploadBlogParams> {
   final BlogRepository blogRepository;

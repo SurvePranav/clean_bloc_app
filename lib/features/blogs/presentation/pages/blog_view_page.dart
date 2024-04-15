@@ -3,7 +3,6 @@ import 'package:clean_bloc_app/core/utils/calculate_reading_time.dart';
 import 'package:clean_bloc_app/core/utils/format_date.dart';
 import 'package:clean_bloc_app/features/blogs/domain/entities/blog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class BlogViewPage extends StatelessWidget {
   final Blog blog;
@@ -62,10 +61,10 @@ class BlogViewPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     child: Hero(
                       tag: blog.id,
-                      child: Image.network(
-                        blog.imageUrl,
-                        fit: BoxFit.cover,
-                      ),
+                      child: Image.network(blog.imageUrl, fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                        return const Icon(Icons.image);
+                      }),
                     ),
                   ),
                 ),
@@ -74,7 +73,7 @@ class BlogViewPage extends StatelessWidget {
                 ),
                 Text(
                   blog.content,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     height: 2,
                   ),

@@ -30,7 +30,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Blog App'),
+        centerTitle: true,
+        title: const Text('Daily Blogs'),
         actions: [
           IconButton(
             onPressed: () {
