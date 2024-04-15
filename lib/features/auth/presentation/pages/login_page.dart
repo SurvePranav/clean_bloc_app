@@ -2,10 +2,10 @@ import 'package:clean_bloc_app/core/common/widgets/loader.dart';
 import 'package:clean_bloc_app/core/theme/app_palette.dart';
 import 'package:clean_bloc_app/core/utils/show_snackbar.dart';
 import 'package:clean_bloc_app/features/auth/presentation/bloc/auth_bloc.dart';
-import 'package:clean_bloc_app/features/auth/presentation/pages/home_page.dart';
 import 'package:clean_bloc_app/features/auth/presentation/pages/signup_page.dart';
 import 'package:clean_bloc_app/features/auth/presentation/widgets/auth_button.dart';
 import 'package:clean_bloc_app/features/auth/presentation/widgets/auth_field.dart';
+import 'package:clean_bloc_app/features/blogs/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
