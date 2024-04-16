@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:clean_bloc_app/core/common/widgets/cubits/app_user/app_user_cubit.dart';
+import 'package:clean_bloc_app/core/common/cubits/app_user/app_user_cubit.dart';
 import 'package:clean_bloc_app/core/usecase/usecase.dart';
 import 'package:clean_bloc_app/core/entities/user.dart';
 import 'package:clean_bloc_app/features/auth/domain/usecases/current_user.dart';

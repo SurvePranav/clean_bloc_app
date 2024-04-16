@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'dart:io';
 
-import 'package:clean_bloc_app/core/common/widgets/cubits/app_user/app_user_cubit.dart';
+import 'package:clean_bloc_app/core/common/cubits/app_user/app_user_cubit.dart';
 import 'package:clean_bloc_app/core/common/widgets/loader.dart';
 import 'package:clean_bloc_app/core/constants/constants.dart';
 import 'package:clean_bloc_app/core/theme/app_palette.dart';

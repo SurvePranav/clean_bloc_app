@@ -5,5 +5,6 @@ class Constants {
     'Programming',
     'Entertainment',
     'Information',
+    'Sports',
   ];
 }

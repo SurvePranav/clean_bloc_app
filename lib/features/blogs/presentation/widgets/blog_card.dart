@@ -45,7 +45,7 @@ class BlogCard extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
                 color,
-                AppPallete.transparentColor.withOpacity(0.4),
+                AppPallete.transparentColor.withOpacity(0.2),
               ], begin: Alignment.topLeft, end: Alignment.bottomRight),
               borderRadius: BorderRadius.circular(10),
             ),
